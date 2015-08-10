@@ -8,7 +8,7 @@ let blank_sep_strings = Ocamlbuild_pack.Lexers.blank_sep_strings
 
 (* this lists all supported packages *)
 let find_packages () =
-  blank_sep_strings &
+  blank_sep_strings "" &
     Lexing.from_string &
       run_and_read "ocamlfind list | cut -d' ' -f1"
 
